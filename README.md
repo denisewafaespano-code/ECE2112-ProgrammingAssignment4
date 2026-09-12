@@ -3,6 +3,7 @@
 <div style="border-bottom: 2px solid gray; margin-bottom: 10px;"></div>
 This repository contains Programming Assignment 4 for our course, Advanced Computer Programming and Algorithm. The Project focuses on data wrangling and visualization techniques utilizing the Pandas and Matplotlib libraries
 
+//
 **Objectives:**
 The objective of this activity is to demonstrate proficiency in data wrangling and visualization techniques. Specifically, this experiment focuses on filtering tabular datasets through multiple categorical and numerical criteria, constructing focused DataFrames by extracting key features, and summarizing the statistical relationships between categorical variables and numerical scores. Furthermore, it highlights the ability to effectively communicate data insights through clear, well-structured, and correctly labeled visualizations.
 <div style="border-bottom: 2px solid gray; margin-bottom: 10px;"></div>
