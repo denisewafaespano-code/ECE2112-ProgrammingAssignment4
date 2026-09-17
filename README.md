@@ -48,15 +48,57 @@ Just like the previous problem, the pairs `(df['Hometown'] == 'Visayas')` with `
 VisFemale = (VisFemale[VisFemale['Average'] >= 60])
 VisFemale
 ```
-In this section, a numerical filter evaluates the Average column against the threshold of 60 (>= 60). With this operation, 
+ 
 
 ## C. CATEGORY-AVERAGE VISUALIZATION
 <div style="border-bottom: 2px solid gray; margin-bottom: 10px;"></div>
 
+```python
+track_mean = df.groupby('Track')['Average'].mean().reset_index()
+track_mean
+```
 
+```python
+gender_mean = df.groupby('Gender')['Average'].mean().reset_index()
+gender_mean
+```
 
+```python
+hometown_mean = df.groupby('Hometown')['Average'].mean().reset_index()
+hometown_mean
+```
 
+```python
+plt.figure(figsize=(20, 4))
 
+plt.subplot(1, 3, 1)
+plt.bar(track_mean['Track'], track_mean['Average'])
+plt.title('Average by Track')
+plt.xlabel('Track')
+plt.ylabel('Average Score')
+
+plt.subplot(1, 3, 2)
+plt.bar(gender_mean['Gender'], gender_mean['Average'])
+plt.title('Average by Gender')
+plt.xlabel('Gender')
+plt.ylabel('Average Score')
+
+plt.subplot(1, 3, 3)
+plt.bar(hometown_mean['Hometown'], hometown_mean['Average'])
+plt.title('Average by Hometown')
+plt.xlabel('Hometown')
+plt.ylabel('Average Score')
+
+plt.show()
+```
+
+Thank you for reading!
+
+To see the main Python program for Programming Assignment 4, click this  and download. Open on Jupyter Notebook, then run all cells. 
+
+**READ ME file Version History:**
+*September 11, 2026 - Initial README file started.
+*September 17, 2025 - 
 
 
 
